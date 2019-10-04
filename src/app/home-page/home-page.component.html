@@ -1,0 +1,98 @@
+<div class="container-fluid mt-5 mb-5 ml-auto mr-auto">
+  <div class="col-12">
+<ngb-carousel class="carouselimg ml-auto mr-auto">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img class="carouselimg2" src="../assets/image/carousel1.jpg" alt="Random first slide">
+    </div>
+<!--    <div class="carousel-caption">-->
+<!--      <h3 class="text-dark">10 seconds between slides...</h3>-->
+<!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+<!--    </div>-->
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img class="carouselimg2" src="../assets/image/carousel6.png" alt="Random second slide">
+    </div>
+<!--    <div class="carousel-caption">-->
+<!--      <h3 class="text-dark">No mouse events...</h3>-->
+<!--      <p class="text-dark">This carousel doesn't pause or resume on mouse events</p>-->
+<!--    </div>-->
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img class="carouselimg2" src="../assets/image/carousel3.jpg"  alt="Random third slide">
+    </div>
+<!--    <div class="carousel-caption">-->
+<!--      <h3 class="text-dark">No keyboard...</h3>-->
+<!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+<!--    </div>-->
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img class="carouselimg2" src="../assets/image/carousel4.jpg" alt="Random fourth slide">
+    </div>
+<!--    <div class="carousel-caption">-->
+<!--      <h3 class="text-dark">And no wrap after last slide.</h3>-->
+<!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+<!--    </div>-->
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img class="carouselimg2" src="../assets/image/carousel5.jpg" alt="Random fourth slide">
+    </div>
+<!--    <div class="carousel-caption">-->
+<!--      <h3 class="text-dark">And no wrap after last slide.</h3>-->
+<!--      <p class="text-dark">This carousel uses customized default values.</p>-->
+<!--    </div>-->
+  </ng-template>
+</ngb-carousel>
+  </div>
+</div>
+<div class="row mt-2 ml-3">
+<div class="card cardstyle mr-3 col-lg-2">
+  <div class="card-body w-5">
+
+  <h3 class=" card-title  text-info">Price Filter</h3>
+    <div>
+    <input type="checkbox" class="checkbox form-check-input ml-1" id="check1" name="option1" value="something" checked>
+    <span class="ml-4">below 499</span>
+    </div>
+    <div>
+    <input type="checkbox" class="checkbox form-check-input ml-1" id="check2" name="option1" value="something" >
+    <span class="ml-4">500-999</span>
+    </div>
+    <div>
+    <input type="checkbox" class="checkbox form-check-input ml-1" id="check3" name="option1" value="something" >
+    <span class="ml-4">1000-1499</span>
+    </div>
+    <div>
+      <input type="checkbox" class="checkbox form-check-input ml-1" id="check4" name="option1" value="something" >
+      <span class="ml-4">1500-1999</span>
+    </div>
+  </div>
+
+</div>
+
+<!--  <div class="row">-->
+<!--<div style="display:flex; justify-content:space-between;">-->
+  <div class="card col-lg-9">
+  <div class="row">
+    <div *ngFor="let images of image">
+      <div class="card mt-4 ml-3 mr-4 col-11">
+        <img src="{{images.image}}" style="height:200px; width:200px"><br>
+        <span class="item"><b>{{images.name}}</b></span>
+        <span class="price"><b>{{images.price}}</b></span>
+        <span class="off">{{images.off}}</span>
+       <div class="btn btn-info mt-2" (click)="gotodetails(images.productid)">view details</div>
+        <div class="btn btn-warning mt-2" redirectTo="" (click)="addtocart(images.productid)">Add to cart</div>
+      </div>
+    </div>
+  </div>ggi
+
+  </div>
+  </div>
+
+
+
+

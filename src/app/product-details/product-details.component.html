@@ -1,0 +1,99 @@
+<div [ngSwitch]="pid">
+    <div *ngSwitchCase="'1'">
+      <div class="container-fluid mt-5">
+      <div class="d-flex">
+      <div class="col-sm-5 ml-5 mr-4">
+        <img src="{{productdt.url}}" class="card1"><br>
+        <div class="btn btn-warning text-light pl-auto col-sm-6">Add to Cart</div>
+      </div>
+      <div class="card">
+        <p class=""><b>{{productdt.item}}</b></p>
+        <span class="text-success"><b>Special Price</b></span>
+        <h4 class="price">{{productdt.price}}</h4>
+        <span>Colors : {{productdt.color}}</span>
+        <span>Material used : {{productdt.material}}</span>
+        <span>Manufacture Warranty : {{productdt.productwarranty}}</span>
+        <span>Life Style : {{productdt.lifestyle}}</span>
+        <p>
+          <i class="material-icons materialicon">
+            local_offer
+          </i> <b class="ml-2">Special Price</b> Get extra {{productdt.off}}  (price inclusive of discount)T&C
+        </p>
+        <p>
+          <i class="material-icons materialicon">
+            local_offer
+          </i> <b class="ml-2">Bank Offer</b>10% Instant Discount on Mastercard for First 3 Prepaid PaymentsT&C
+        </p>
+        <p>
+          <i class="material-icons materialicon">
+            local_offer
+          </i> <b class="ml-2">Bank Offer</b> 5% Unlimited Cashback on Shopping  Bank Credit CardT&C
+        </p>
+      </div>
+      </div>
+      </div>
+      </div>
+    <div *ngSwitchCase="'2'">
+      <div class="container-fluid">
+      <div class="row mt-5 mb-5">
+      <div class="col-sm-6 ml-5 mt-5 mb-5">
+        <img src="{{productdt.url}}" class="card1"><br>
+        <div class="btn btn-warning text-light col-sm-8">Add to Cart</div>
+      </div>
+      <div class="card">
+        <p class=""><b>{{productdt.item}}</b></p>
+        <span class="text-success"><b>Special Price</b></span>
+        <h4 class="price">{{productdt.price}}</h4>
+        <span>Pages:{{productdt.pages}}</span>
+        <p>
+          <i class="material-icons materialicon">
+            local_offer
+          </i> <b class="ml-2">Special Price</b> Get extra {{productdt.off}}  (price inclusive of discount)T&C
+        </p>
+        <p>
+          <i class="material-icons materialicon">
+            local_offer
+          </i> <b class="ml-2">Bank Offer</b>10% Instant Discount on Mastercard for First 3 Prepaid PaymentsT&C
+        </p>
+        <p>
+          <i class="material-icons materialicon">
+            local_offer
+          </i> <b class="ml-2">Bank Offer</b> 5% Unlimited Cashback on Shopping  Bank Credit CardT&C
+        </p>
+      </div>
+      </div>
+      </div>
+    </div>
+  <div *ngSwitchCase="3">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 ml-5 mr-5 pt-5">
+        <img src="{{productdt.url}}" class="card1 mb-5"><br>
+        <div class="btn btn-warning text-light col-sm-12  pl-auto ml-auto">Add to Cart</div>
+      </div>
+      <div class="card">
+        <p class=""><b>{{productdt.item}}</b></p>
+        <span class="text-success"><b>Special Price</b></span>
+        <h4 class="price">{{productdt.price}}</h4>
+        <span>You Safe:<span class="">{{productdt.yousafe}}</span></span>
+        <p>
+          <i class="material-icons materialicon">
+            local_offer
+          </i> <b class="ml-2">Special Price</b> Get extra {{productdt.off}}  (price inclusive of discount)T&C
+        </p>
+        <p>
+          <i class="material-icons materialicon">
+            local_offer
+          </i> <b class="ml-2">Bank Offer</b>10% Instant Discount on Mastercard for First 3 Prepaid PaymentsT&C
+        </p>
+        <p>
+          <i class="material-icons materialicon">
+            local_offer
+          </i> <b class="ml-2">Bank Offer</b> 5% Unlimited Cashback on Shopping  Bank Credit CardT&C
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
