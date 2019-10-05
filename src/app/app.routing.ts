@@ -4,6 +4,8 @@ import {UserCartComponent} from './user-cart/user-cart.component';
 import {ProductDetailsComponent} from './product-details/product-details.component';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
+import {LogoutComponent} from "./logout/logout.component";
+import {AuthGuardService} from "./auth-guard.service";
 
 export const MAIN_ROUTES: Routes = [
   {
@@ -19,6 +21,6 @@ export const MAIN_ROUTES: Routes = [
   {path : 'details', component : ProductDetailsComponent},
   {path : 'cart' , component : UserCartComponent},
   {path : 'details/:id' , component : ProductDetailsComponent},
-  {path : 'login' , component : LoginComponent}
-
+  {path : 'login' , component : LoginComponent},
+  {path : 'logout' , component : LogoutComponent , canActivate:[AuthGuardService]}
   ];

@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar1 navbar-expand-sm">
 
       <a class="navbar-brand text text-light">Shopping.in</a>
@@ -36,8 +37,11 @@
       </a>
     </li>
     <li class="nav-item text text-light ml-4">
-      <a class="nav-link text text-light" routerLink="/login" href="#">
+      <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link text text-light" routerLink="/login" href="#">
         Login
+      </a>
+      <a *ngIf="loginservice.isUserLoggedIn()" class="nav-link text text-light" routerLink="/logout" href="#">
+        Logout
       </a>
     </li>
   </ul>

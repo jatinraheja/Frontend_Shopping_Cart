@@ -9,6 +9,10 @@ import {Observable} from "rxjs";
 export class ProductsdataService {
 
   constructor(private http: HttpClient) { }
+  getProductListbyElectronics(): Observable<IProduct[]>
+  {
+    return this.http.get<IProduct[]>("http://localhost:8888/api/items/category/Electronics")
+  }
   getProductList(): Observable<IProduct[]>
   {
      return this.http.get<IProduct[]>("http://localhost:8888/api/items");
