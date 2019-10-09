@@ -22,8 +22,10 @@ export class HomePageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.productdata.getProductList()
-      .subscribe(data => this.image=data);
+this.productdata.getProductList().subscribe(data=>{
+  this.image = data;
+});
+
   }
 
   gotodetails(id) {

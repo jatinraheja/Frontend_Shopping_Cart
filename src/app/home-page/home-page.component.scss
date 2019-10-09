@@ -8,11 +8,28 @@
   background-color: #235789;
   color: white;
 }
+.image
+{
+  margin: auto;
+}
+.bttn
+{
+
+  width: 200px;
+  padding:1.5px;
+  height: 35px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:10px;
+  border-radius: 1rem;
+}
 .btn-info:hover
 {
-  background-color:#EBBAB9;
-  border-color:#EBBAB9;
+  background-color:darkblue;
+  border-color:darkblue;
   color: white;
+
 }
 .item
 {

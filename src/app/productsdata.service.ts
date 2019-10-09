@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {IProduct} from "./product";
 import {Observable} from "rxjs";
 
@@ -9,13 +9,39 @@ import {Observable} from "rxjs";
 export class ProductsdataService {
 
   constructor(private http: HttpClient) { }
-  getProductListbyElectronics(): Observable<IProduct[]>
+  // getProductListbyElectronics(): Observable<IProduct[]>
+  // {
+  //   return this.http.get<IProduct[]>("http://localhost:8888/api/items/category/Electronics")
+  // }
+  // getproductauth()
+  // {
+  //
+  //
+  // }
+  gethomeList()
   {
-    return this.http.get<IProduct[]>("http://localhost:8888/api/items/category/Electronics")
+    return[
+      {
+        name:'Footwear',
+        image:'../assets/image/footwearhome.jpg',
+      },
+      {
+        name:'Electronics',
+        image:'../assets/image/electronicshome.jpg',
+      },
+      {
+        name:'Books',
+        image:'../assets/image/bookshome.jpg',
+      }
+    ]
   }
-  getProductList(): Observable<IProduct[]>
-  {
-     return this.http.get<IProduct[]>("http://localhost:8888/api/items");
+   getProductList()
+   {
+     const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({ Authorization : 'Basic' + token});
+     return this.http.get<IProduct[]>("http://localhost:8888/api/items",{headers});
+
+  }
     // return [
     //   {
     //     // 'id': 1,
@@ -114,5 +140,5 @@ export class ProductsdataService {
     //   }
 
 
-  }
+
 }

@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar1 navbar-expand-sm">
 
-      <a class="navbar-brand text text-light">Shopping.in</a>
+      <a class="navbar-brand text text-light shp">Shopping.in</a>
 
 <!--  <ul>-->
 <!--    <li> </li>-->
@@ -40,6 +40,8 @@
       <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link text text-light" routerLink="/login" href="#">
         Login
       </a>
+    </li>
+    <li>
       <a *ngIf="loginservice.isUserLoggedIn()" class="nav-link text text-light" routerLink="/logout" href="#">
         Logout
       </a>
@@ -89,7 +91,7 @@
          <div><i class="material-icons">
             sports_esports
           </i></div>
-          <div class="ml-1">Sports</div>
+          <div class="ml-1">Footwear</div>
           </div>
         </a>
 
