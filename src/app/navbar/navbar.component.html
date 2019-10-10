@@ -37,12 +37,12 @@
       </a>
     </li>
     <li class="nav-item text text-light ml-4">
-      <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link text text-light" routerLink="/login" href="#">
+      <a *ngIf="loginservice.isUserLoggedIn()" class="nav-link text text-light" routerLink="/login" href="#">
         Login
       </a>
     </li>
     <li>
-      <a *ngIf="loginservice.isUserLoggedIn()" class="nav-link text text-light" routerLink="/logout" href="#">
+      <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link text text-light" (click)="loginservice.logOut()" routerLink="/home" href="#">
         Logout
       </a>
     </li>
@@ -51,59 +51,59 @@
 <!--  <nav class="navbar navbar-expand-sm bg-dark ">-->
 </nav>
 
-<nav class="navbar navbar-expand-sm">
+<!--<nav class="navbar navbar-expand-sm">-->
 
-  <ul class="navbar-nav col-12">
-<!--    <div class="d-flex justify-content-between">-->
-<!--    <div>-->
-    <li class="nav-item  navanchor col-3">
-      <a class=" nav-link ml-5 text-dark" routerLink="/home" href="#">
-      <div class="d-flex">
-       <div><i class="material-icons">home</i></div>
-        <div><p class=" ml-1"> Home </p></div>
-      </div>
-      </a>
-    </li>
-<!--    </div>-->
-
-      <li class="nav-item  navanchor col-3">
-        <a class="nav-link ml-5 text-dark" href="#">
-        <div class="d-flex">
-         <div><i class="material-icons">tv</i></div>
-           <div><p class="ml-1">Electronics</p></div>
-        </div>
-      </a>
-    </li>
-
-    <li class="nav-item navanchor col-3">
-      <a class="nav-link ml-5 text-dark" href="#">
-        <div class="d-flex">
-       <div> <i class="material-icons">library_books</i></div>
-       <div class="ml-1">Books</div>
-        </div>
-      </a>
-    </li>
-
-    <li class="nav-item navanchor col-3">
-
-        <a class="nav-link ml-5 text-dark" href="#">
-          <div class="d-flex">
-         <div><i class="material-icons">
-            sports_esports
-          </i></div>
-          <div class="ml-1">Footwear</div>
-          </div>
-        </a>
-
-        </li>
-
-<!--    <li class="nav-item text text-light mr-5 navanchor col-3">-->
-<!--      <a class="nav-link text text-light" href="#">-->
-<!--        Clothing-->
+<!--  <ul class="navbar-nav col-12">-->
+<!--&lt;!&ndash;    <div class="d-flex justify-content-between">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div>&ndash;&gt;-->
+<!--    <li class="nav-item  navanchor col-3">-->
+<!--      <a class=" nav-link ml-5 text-dark" routerLink="/home" href="#">-->
+<!--      <div class="d-flex">-->
+<!--       <div><i class="material-icons">home</i></div>-->
+<!--        <div><p class=" ml-1" routerLink="/home"> Home </p></div>-->
+<!--      </div>-->
 <!--      </a>-->
 <!--    </li>-->
-<!--    </div>-->
-  </ul>
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
 
-  </nav>
+<!--      <li class="nav-item  navanchor col-3">-->
+<!--        <a class="nav-link ml-5 text-dark" href="#">-->
+<!--        <div class="d-flex">-->
+<!--         <div><i class="material-icons">tv</i></div>-->
+<!--           <div><p class="ml-1">Electronics</p></div>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--    </li>-->
+
+<!--    <li class="nav-item navanchor col-3">-->
+<!--      <a class="nav-link ml-5 text-dark" href="#">-->
+<!--        <div class="d-flex">-->
+<!--       <div> <i class="material-icons">library_books</i></div>-->
+<!--       <div class="ml-1">Books</div>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--    </li>-->
+
+<!--    <li class="nav-item navanchor col-3">-->
+
+<!--        <a class="nav-link ml-5 text-dark" href="#">-->
+<!--          <div class="d-flex">-->
+<!--         <div><i class="material-icons">-->
+<!--            sports_esports-->
+<!--          </i></div>-->
+<!--          <div class="ml-1">Footwear</div>-->
+<!--          </div>-->
+<!--        </a>-->
+
+<!--        </li>-->
+
+<!--&lt;!&ndash;    <li class="nav-item text text-light mr-5 navanchor col-3">&ndash;&gt;-->
+<!--&lt;!&ndash;      <a class="nav-link text text-light" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;        Clothing&ndash;&gt;-->
+<!--&lt;!&ndash;      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--  </ul>-->
+
+<!--  </nav>-->
 

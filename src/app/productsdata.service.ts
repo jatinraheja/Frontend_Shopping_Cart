@@ -38,7 +38,7 @@ export class ProductsdataService {
    getProductList()
    {
      const token = sessionStorage.getItem('token');
-    const headers = new HttpHeaders({ Authorization : 'Basic' + token});
+    const headers = new HttpHeaders({ Authorization : 'Basic ' + token});
      return this.http.get<IProduct[]>("http://localhost:8888/api/items",{headers});
 
   }
@@ -94,7 +94,7 @@ export class ProductsdataService {
     //     // 'yousafe': '₹6,060'
     //   },
     //   {
-    //     // 'id': 21,
+    //     // 'id': 21,.....
     //     'image': 'assets/image/refrigerator1.jpeg',
     //     'name' : 'Whirlpool 340 L Refrigerator',
     //     'details': 'color: Black,productwarranty: 1 year',

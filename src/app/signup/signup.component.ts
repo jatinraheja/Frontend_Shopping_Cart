@@ -1,4 +1,9 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AppService} from "../app.service";
+import {Router} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
+import {postdata, respdata} from "../Postdataobj";
+import {SignupService} from "../signup.service";
 
 @Component({
   selector: 'app-signup',
@@ -8,9 +13,30 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private app : AppService,private route : Router, private http : HttpClient,
+              private signupservice : SignupService) { }
+  username;
+  email;
+  password;
+  confirmpassword;
+  pdata : postdata;
+  rdata : respdata;
   ngOnInit() {
+    if(this.app.checklogin())
+    {
+      this.route.navigate(['home']);
+    }
+
+  }
+  Signup()
+  {
+    this.pdata=new postdata();
+    this.pdata.email=this.email;
+    this.pdata.password=this.password;
+    this.signupservice.adddata(this.pdata).subscribe((res :respdata)=>{
+      this.rdata=res;
+  });
+    this.route.navigate(['login']);
   }
 
 }

@@ -1,3 +1,58 @@
+<nav class="navbar navbar-expand-sm">
+
+  <ul class="navbar-nav col-12">
+    <!--    <div class="d-flex justify-content-between">-->
+    <!--    <div>-->
+    <li class="nav-item  navanchor col-3">
+      <a class=" nav-link ml-5 text-dark" routerLink="/home" href="#">
+        <div class="d-flex">
+          <div><i class="material-icons">home</i></div>
+          <div><p class=" ml-1 text-dark" routerLink="/home"> Home </p></div>
+        </div>
+      </a>
+    </li>
+    <!--    </div>-->
+
+    <li class="nav-item  navanchor col-3">
+      <a class="nav-link ml-5 text-dark" (click)="getByCategory('Electronics')">
+        <div class="d-flex" >
+          <div><i class="material-icons">tv</i></div>
+          <div><p class="ml-1">Electronics</p></div>
+        </div>
+      </a>
+    </li>
+
+    <li class="nav-item navanchor col-3">
+      <a class="nav-link ml-5 text-dark">
+        <div class="d-flex">
+          <div> <i class="material-icons">library_books</i></div>
+          <div class="ml-1" (click)="getByCategory('Books')">Books</div>
+        </div>
+      </a>
+    </li>
+
+    <li class="nav-item navanchor col-3">
+
+      <a class="nav-link ml-5 text-dark">
+        <div class="d-flex">
+          <div><i class="material-icons">
+            sports_esports
+          </i></div>
+          <div class="ml-1" (click)="getByCategory('Footwear')">Footwear</div>
+        </div>
+      </a>
+
+    </li>
+
+    <!--    <li class="nav-item text text-light mr-5 navanchor col-3">-->
+    <!--      <a class="nav-link text text-light" href="#">-->
+    <!--        Clothing-->
+    <!--      </a>-->
+    <!--    </li>-->
+    <!--    </div>-->
+  </ul>
+
+</nav>
 <div class="container-fluid mt-5 mb-5 ml-auto mr-auto">
   <div class="col-12">
 <ngb-carousel class="carouselimg ml-auto mr-auto">
@@ -49,50 +104,48 @@
 </ngb-carousel>
   </div>
 </div>
+<div class="d-flex">
+<div class="card cardstyle mr-3 col-lg-2">
+  <div class="card-body w-5">
 
-<!--<div class="card cardstyle mr-3 col-lg-2">-->
-<!--  <div class="card-body w-5">-->
+  <h3 class=" card-title  text-info">Price Filter</h3>
+    <div>
+    <input type="checkbox" class="checkbox form-check-input ml-1" id="check1" name="option1" value="something" checked>
+    <span class="ml-4">below 499</span>
+    </div>
+    <div>
+    <input type="checkbox" class="checkbox form-check-input ml-1" id="check2" name="option1" value="something" >
+    <span class="ml-4">500-999</span>
+    </div>
+    <div>
+    <input type="checkbox" class="checkbox form-check-input ml-1" id="check3" name="option1" value="something" >
+    <span class="ml-4">1000-1499</span>
+    </div>
+    <div>
+      <input type="checkbox" class="checkbox form-check-input ml-1" id="check4" name="option1" value="something" >
+      <span class="ml-4">1500-1999</span>
+    </div>
+  </div>
 
-<!--  <h3 class=" card-title  text-info">Price Filter</h3>-->
-<!--    <div>-->
-<!--    <input type="checkbox" class="checkbox form-check-input ml-1" id="check1" name="option1" value="something" checked>-->
-<!--    <span class="ml-4">below 499</span>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--    <input type="checkbox" class="checkbox form-check-input ml-1" id="check2" name="option1" value="something" >-->
-<!--    <span class="ml-4">500-999</span>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--    <input type="checkbox" class="checkbox form-check-input ml-1" id="check3" name="option1" value="something" >-->
-<!--    <span class="ml-4">1000-1499</span>-->
-<!--    </div>-->
-<!--    <div>-->
-<!--      <input type="checkbox" class="checkbox form-check-input ml-1" id="check4" name="option1" value="something" >-->
-<!--      <span class="ml-4">1500-1999</span>-->
-<!--    </div>-->
-<!--  </div>-->
+</div>
 
-<!--</div>-->
-
-<!--  <div class="row">-->
-<!--<div style="display:flex; justify-content:space-between;">-->
+  <div class="row">
+<div style="display:flex; justify-content:space-between;">
   <div class="card col-lg-10">
   <div class="row">
     <div *ngFor="let images of image" class="pr-5 pb-3 ml-5">
       <div class="card mt-4 col-lg-12">
-        <img src="{{images.image}}" class="image" style="height:300px; width:500px"><br>
-<!--        <span class="item"><b>{{images.name}}</b></span>-->
-<!--        <span class="price"><b>{{images.price}}</b></span>-->
-<!--        <span class="off">{{images.off}}</span>-->
+        <img src="{{images.image}}" class="image" style="height:200px; width:100px"><br>
+        <span class="item"><b>{{images.name}}</b></span>
+        <span class="price"><b>{{images.price}}</b></span>
+        <span class="off">{{images.off}}</span>
        <div class="btn btn-info mt-1 bttn">{{images.name}}</div>
-<!--        <div class="btn btn-warning mt-2" redirectTo="" (click)="addtocart(images.productid)">Add to cart</div>-->
+ <div class="btn btn-warning mt-2" (click)="addtocart(images.productid)">Add to cart</div>
       </div>
     </div>
   </div>
 
   </div>
-
-
-
-
-
+</div>
+  </div>
+</div>

@@ -16,6 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from "@angular/forms";
 import { LogoutComponent } from './logout/logout.component';
 import {AuthenticateService} from "./authenticate.service";
+import {AppService} from "./app.service";
 // import {AuthGuardService} from "./auth-guard.service";
 
 @NgModule({
@@ -39,7 +40,8 @@ import {AuthenticateService} from "./authenticate.service";
   ],
   providers: [
     ProductsdataService,
-    AuthenticateService
+    AuthenticateService,
+    AppService
   ],
   bootstrap: [AppComponent]
 })

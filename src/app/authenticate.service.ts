@@ -2,31 +2,20 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {pipe} from "rxjs";
 import {map} from "rxjs/operators";
-export class User {
-  constructor(
-    public status: string,
-  ) { }
-
-}
+import {AppService} from "./app.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class Users{
-  constructor(
-    public status:string,
-  ) {}
-
-}
 export class AuthenticateService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient,private service : AppService) { }
   authenticate(username,password) {
     const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(username + ':' + password)});
-    this.http.get<User>("http://localhost:8888/api/validate/validateLogin", {headers})
+    return this.http.get("http://localhost:8888/user/allusers", {headers})
       .pipe(
       map(
-        userData => {
+          data => {
           sessionStorage.setItem('token', btoa(username + ':' + password));
 
         }
@@ -41,12 +30,14 @@ export class AuthenticateService {
 
   isUserLoggedIn()
   {
-    let user = sessionStorage.getItem('email')
-    console.log(!(user === null))
-    return !(user === null)
+    let user = sessionStorage.getItem('token')
+
+    return (user === null)
   }
   logOut()
   {
-    sessionStorage.removeItem('email');
+    sessionStorage.removeItem('token');
+    this.service.isLoggedIn(false);
+
   }
 }
