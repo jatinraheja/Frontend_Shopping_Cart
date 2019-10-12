@@ -20,6 +20,9 @@ gotohome()
 {
   this.route.navigate(['home']);
 }
-
+gotocart()
+{
+  this.route.navigate(['/cart']);
+}
 
 }

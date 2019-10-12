@@ -9,7 +9,7 @@ import {CartService} from "../cart.service";
 export class UserCartComponent implements OnInit {
 
   constructor(private cartservice : CartService) { }
-  image;
+  data;
     // {
     //   'id': 1,
     //   'url': 'assets/image/addidasshoe1.jpg',
@@ -56,7 +56,7 @@ export class UserCartComponent implements OnInit {
   ngOnInit() {
     this.cartservice.showcart().subscribe(data =>
     {
-      this.image=data;
+      this.data=data;
       console.log(data);
     })
   }

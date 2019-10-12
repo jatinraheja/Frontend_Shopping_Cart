@@ -1,10 +1,25 @@
 <h1 class="ml-auto mr-auto">Items in the Bag</h1>
 <div class="container">
-    <div class="row">
-      <div class="card cardstyle">
+    <div  *ngIf="data">
+      <div *ngFor="let dt of data">
+      <div class="row">
+      <div class="card cardstyle col-3 mb-3">
           <div>
-
+          <img src="{{dt.items.image}}" class="img-responsive col-8">
           </div>
       </div>
+        <div class="card cardstyle ml-5 card2 mb-2">
+            <div class="pt-2">
+              <p><b>Price : </b><span>{{dt.items.price}}</span></p>
+            </div>
+        </div>
+      </div>
+<!--      <div class="card cardstyle col-3">-->
+<!--        <div>-->
+<!--          <p class="btn">Quantity</p>-->
+<!--          <input type="text">-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
     </div>
 </div>
