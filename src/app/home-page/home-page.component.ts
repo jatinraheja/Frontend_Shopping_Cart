@@ -5,6 +5,7 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import {AppService} from "../app.service";
 import {HomeService} from "../home.service";
 import {HttpHeaders} from "@angular/common/http";
+import {CartService} from "../cart.service";
 // @ts-ignore
 
 
@@ -17,8 +18,9 @@ import {HttpHeaders} from "@angular/common/http";
 export class HomePageComponent implements OnInit {
 
   public image = [];
+  public addeditem;
   constructor(private router: Router, private productdata: ProductsdataService, config: NgbCarouselConfig,
-              private service : AppService , private homeservice:HomeService) {
+              private service : AppService , private homeservice:HomeService,private cartservice : CartService) {
     config.interval = 2000;
     config.wrap = true;
     config.keyboard = false;
@@ -56,9 +58,12 @@ export class HomePageComponent implements OnInit {
     });
   }
   addtocart(id) {
-    const token = sessionStorage.getItem('token');
-    const headers = new HttpHeaders({Authorization : 'Basic ' + token});
-    this.router.navigate(['/cart', id]);
+    // const token = sessionStorage.getItem('token');
+    // const headers = new HttpHeaders({Authorization : 'Basic ' + token});
+    this.cartservice.addItemtoCart(id).subscribe(data=>
+    {
+      this.addeditem=data;
+    });
 
   }
   productdetails(id)
