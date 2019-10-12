@@ -19,7 +19,7 @@ export const MAIN_ROUTES: Routes = [
   },
 {path : 'home' , component : HomePageComponent},
   {path : 'details', component : ProductDetailsComponent},
-  {path : 'cart' , component : UserCartComponent},
+  {path : 'cart/:id' , component : UserCartComponent},
   {path : 'details/:id' , component : ProductDetailsComponent},
   {path : 'login' , component : LoginComponent},
   {path : 'logout' , component : LogoutComponent}

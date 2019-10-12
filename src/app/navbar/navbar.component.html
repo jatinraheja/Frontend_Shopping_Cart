@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar1 navbar-expand-sm">
 
-      <a class="navbar-brand text text-light shp">Shopping.in</a>
+      <div class="navbar-brand text   shp" (click)="gotohome()">Shopping.in</div>
 
 <!--  <ul>-->
 <!--    <li> </li>-->
@@ -27,18 +27,23 @@
 <!--        My Profile-->
 <!--      </a>-->
 <!--    </li>-->
-    <li class="nav-item ml-4">
-      <a class="nav-link text text-light ml-1" routerLink="/cart" href="#">
-        <div class="d-flex text-light">
-        <div><i class="material-icons">
+    <li class="nav-item ">
+      <a class="nav-link text ml-1" routerLink="/cart" href="#">
+        <div class="d-flex">
+        <div class="mr-1"><i class="material-icons ">
           shopping_cart</i></div>
-         <div class="ml-1"><a class="text-light">Cart</a></div>
+         <div class="ml-1"><a class="">Cart</a></div>
         </div>
       </a>
     </li>
-    <li class="nav-item text text-light ml-4">
-      <a *ngIf="loginservice.isUserLoggedIn()" class="nav-link text text-light" routerLink="/login" href="#">
-        Login
+    <li class="nav-item text">
+      <a *ngIf="loginservice.isUserLoggedIn()" class="nav-link text " routerLink="/login" href="#">
+        <div class="d-flex">
+          <div><i class="material-icons">
+            account_circle
+          </i></div>
+          <div class=""><a class="">Login&Signup</a></div>
+        </div>
       </a>
     </li>
     <li>

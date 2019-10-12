@@ -24,21 +24,21 @@ export class ProductDetailsComponent implements OnInit {
     this.productsdata = this.productservice.getProductList();
     for ( let product of this.productsdata)
     {
-     if (product.id === this.productid)
+     if (product.productid === this.productid)
      {
        this.productdt = product;
-       if(this.productdt.id < 10)
-       {
-         this.pid = 1;
-       }
-       if(this.productdt.id >= 10 && this.productdt.id < 20)
-       {
-         this.pid = 2;
-       }
-       if(this.productdt.id >= 20 && this.productdt.id < 30)
-       {
-         this.pid = 3;
-       }
+       // if(this.productdt.id < 10)
+       // {
+       //   this.pid = 1;
+       // }
+       // if(this.productdt.id >= 10 && this.productdt.id < 20)
+       // {
+       //   this.pid = 2;
+       // }
+       // if(this.productdt.id >= 20 && this.productdt.id < 30)
+       // {
+       //   this.pid = 3;
+       // }
      }
     }
   }

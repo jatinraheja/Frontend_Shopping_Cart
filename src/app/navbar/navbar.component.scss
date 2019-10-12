@@ -1,6 +1,26 @@
-.navanchor
+.navbar-brand:hover
 {
-
+color:#5E5E5E;
+}
+.navbar:active
+{
+  color: #D5D5D5;
+}
+.navbar-brand
+{
+  color:#777;
+}
+.text
+{
+  color:#777;
+}
+.nav-link:hover
+{
+  color:#333;
+}
+.text:hover
+{
+  color:#333;
 }
 .navbar
 {
@@ -12,16 +32,16 @@
 }
 .navbar1
 {
-  background-color: #C1292E;
+  background-color: #F8F8F8;
 }
 .text-light:hover
 {
   color: white;
 }
-.d-flex:hover
-{
-  color: dodgerblue;
-}
+//.d-flex:hover
+//{
+//  color: dodgerblue;
+//}
 //a.nav-link:hover
 //{
 //  background-color: dodgerblue;

@@ -16,7 +16,10 @@ export class NavbarComponent implements OnInit {
 
 
   }
-
+gotohome()
+{
+  this.route.navigate(['home']);
+}
 
 
 }

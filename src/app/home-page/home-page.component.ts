@@ -40,7 +40,7 @@ export class HomePageComponent implements OnInit {
   }
   getByCategory(category)
   {
-    console.log("Electronics");
+    console.log(category);
     this.homeservice.getByCat(category).subscribe(data=>{
       this.image = data;
     });
@@ -49,10 +49,20 @@ export class HomePageComponent implements OnInit {
   gotodetails(id) {
     this.router.navigate(['/details', id]);
   }
+  gotohome()
+  {
+    this.productdata.getProductList().subscribe(data=> {
+      this.image = data;
+    });
+  }
   addtocart(id) {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({Authorization : 'Basic ' + token});
     this.router.navigate(['/cart', id]);
 
+  }
+  productdetails(id)
+  {
+    this.router.navigate(['/details',id]);
   }
 }
