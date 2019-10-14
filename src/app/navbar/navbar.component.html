@@ -26,28 +26,28 @@
 <!--        My Profile-->
 <!--      </a>-->
 <!--    </li>-->
-    <li class="nav-item ">
-      <a class="nav-link text ml-1" (click)="gotocart()">
+    <li class="nav-item text">
+      <a class="nav-link  ml-1" (click)="gotocart()">
         <div class="d-flex">
-        <div class="mr-1"><i class="material-icons ">
-          shopping_cart</i></div>
-         <div class="ml-1"><a >Cart</a></div>
+        <div class=""><img src="https://img.icons8.com/material/32/000000/shopping-cart--v1.png"></div>
+         <div class=""><a>Cart</a></div>
         </div>
       </a>
     </li>
     <li class="nav-item text">
       <a *ngIf="loginservice.isUserLoggedIn()" class="nav-link text " routerLink="/login" href="#">
         <div class="d-flex">
-          <div><i class="material-icons">
-            account_circle
-          </i></div>
+          <div><img src="https://img.icons8.com/windows/32/000000/login-rounded-right.png"></div>
           <div class=""><a class="">Login&Signup</a></div>
         </div>
       </a>
     </li>
     <li>
-      <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link text text-light" (click)="loginservice.logOut()" routerLink="/home" href="#">
-        Logout
+      <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link text" (click)="loginservice.logOut()" routerLink="/home" href="#">
+        <div class="d-flex">
+          <div><img src="https://img.icons8.com/windows/32/000000/login-rounded-right.png"></div>
+          <div class=""><a class="">Logout</a></div>
+        </div>
       </a>
     </li>
   </ul>

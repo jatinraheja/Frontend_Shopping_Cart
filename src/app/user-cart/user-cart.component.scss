@@ -6,8 +6,73 @@
 {
   height:200px;
 }
+.btnnum{
+  background-color: #235789;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+}
+//.btnnum:hover
+//{
+//  background-color: #235789;
+//  color: white;
+//
+//}
 .center{
   width: 150px;
   margin: 40px auto;
 
+}
+.textbox
+{
+  width:20%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: auto;
+  border: none;
+}
+.card3{
+  border:none;
+}
+.img-responsive
+{
+  width: 150px;
+  height:150px;
+}
+.btnadd
+{
+  border-color: #5D576B;
+  color: #5D576B;
+  border-radius: 1rem;
+  width: 70%;
+}
+.txtcolor
+{
+  color: #ED6A5A;
+}
+.btnadd:hover
+{
+  background-color: #5D576B;
+  color: white;
+}
+.pricedt
+{
+  font-size: 30px;
+  margin-left: 150px;
+}
+.card5
+{
+  width: 500px;
+}
+.margin2
+{
+  margin-left: 100px;
+}
+.margin
+{
+  margin-left: 100px;
+}
+.margin3
+{
+  margin-left: 150px;
 }

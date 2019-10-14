@@ -5,9 +5,9 @@
     <!--    <div>-->
     <li class="nav-item  navanchor col-3">
       <a class=" nav-link ml-5 text-dark" (click)="gotohome()">
-        <div class="d-flex">
-          <div><i class="material-icons">home</i></div>
-          <div><p class=" ml-1 text-dark"> Home </p></div>
+        <div class="d-flex menu">
+          <div><img src="https://img.icons8.com/color/32/000000/home.png"></div>
+          <div><p class=" ml-1  "> Home </p></div>
         </div>
       </a>
     </li>
@@ -16,8 +16,8 @@
     <li class="nav-item  navanchor col-3">
       <a class="nav-link ml-5 text-dark" (click)="getByCategory('Electronics')">
         <div class="d-flex" >
-          <div><i class="material-icons">tv</i></div>
-          <div><p class="ml-1">Electronics</p></div>
+          <div><img src="https://img.icons8.com/color/32/000000/laptop--v2.png"></div>
+          <div><p class="ml-1 menu">Electronics</p></div>
         </div>
       </a>
     </li>
@@ -25,8 +25,8 @@
     <li class="nav-item navanchor col-3">
       <a class="nav-link ml-5 text-dark">
         <div class="d-flex">
-          <div> <i class="material-icons">library_books</i></div>
-          <div class="ml-1" (click)="getByCategory('Books')">Books</div>
+          <div> <img src="https://img.icons8.com/officel/32/000000/books.png"></div>
+          <div class="ml-1 menu" (click)="getByCategory('Books')">Books</div>
         </div>
       </a>
     </li>
@@ -35,10 +35,8 @@
 
       <a class="nav-link ml-5 text-dark">
         <div class="d-flex">
-          <div><i class="material-icons">
-            sports_esports
-          </i></div>
-          <div class="ml-1" (click)="getByCategory('Footwear')">Footwear</div>
+          <div><img src="https://img.icons8.com/color/32/000000/mens-shoe.png"></div>
+          <div class="ml-1 menu" (click)="getByCategory('Footwear')">Footwear</div>
         </div>
       </a>
 
@@ -54,8 +52,8 @@
 
 </nav>
 <div class="container-fluid mt-5 mb-5 ml-auto mr-auto">
-  <div class="col-12">
-<ngb-carousel class="carouselimg ml-auto mr-auto">
+  <div class="col-10 ml-auto mr-auto carouselimg2">
+<ngb-carousel class="ml-auto">
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
       <img class="carouselimg2" src="../assets/image/carousel1.jpg" alt="Random first slide">
@@ -67,7 +65,7 @@
   </ng-template>
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
-      <img class="carouselimg2" src="../assets/image/carousel6.png" alt="Random second slide">
+      <img class="carouselimg2" src="../assets/image/carousel2.jpg" alt="Random second slide">
     </div>
 <!--    <div class="carousel-caption">-->
 <!--      <h3 class="text-dark">No mouse events...</h3>-->
@@ -94,7 +92,7 @@
   </ng-template>
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
-      <img class="carouselimg2" src="../assets/image/carousel5.jpg" alt="Random fourth slide">
+      <img class="carouselimg2" src="../assets/image/carousel6.jpg" alt="Random fourth slide">
     </div>
 <!--    <div class="carousel-caption">-->
 <!--      <h3 class="text-dark">And no wrap after last slide.</h3>-->
@@ -105,7 +103,7 @@
   </div>
 </div>
 <div class="d-flex">
-<div class="card cardstyle mr-3 col-lg-2">
+<div class="card cardstyle mr-2 col-lg-2">
   <div class="card-body w-5">
 
   <h3 class=" card-title  text-info">Price Filter</h3>
@@ -129,23 +127,23 @@
 
 </div>
 
+  <div class="row ml-2">
+<!--<div style="display:flex; justify-content:space-between;">-->
+  <div class="card">
   <div class="row">
-<div style="display:flex; justify-content:space-between;">
-  <div class="card col-lg-10">
-  <div class="row">
-    <div *ngFor="let images of image" class="pr-5 pb-3 ml-5">
-      <div class="card mt-4 col-lg-12">
-        <img src="{{images.image}}" class="image" style="height:200px; width:100px"><br>
+    <div *ngFor="let images of image" class="mb-2 ml-1">
+      <div class="card  cardstyle">
+        <img src="{{images.image}}" (click)="productdetails(images.productid)" class="image"><br>
         <span class="item"><b>{{images.name}}</b></span>
         <span class="price"><b>₹{{images.price}}</b></span>
-        <span class="off">{{images.off}}</span>
-       <div class="btn btn-info mt-1 bttn" (click)="productdetails(images.productid)">Product Details</div>
+<!--        <span class="off">{{images.off}}</span>-->
+<!--       <div class=" btn-info mt-1 bttn col-10" (click)="productdetails(images.productid)">Product Details</div>-->
  <div class="btn btn-warning mt-2" (click)="addtocart(images.productid)">Add to cart</div>
       </div>
     </div>
   </div>
 
-  </div>
+
 </div>
   </div>
 </div>

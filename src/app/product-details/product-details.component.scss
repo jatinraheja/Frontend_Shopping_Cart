@@ -11,7 +11,33 @@
 {
   color: green;
 }
+.namefont
+{
+  font-size: 20px;
+}
+.symbolcolor
+{
+  color: #FF6542;
+}
+.symbolcolor:hover
+{
+  background-color:white;
+}
+.btnstyle:hover
+{
+  background-color: #FF6542;
+  color:white;
+}
+.btnstyle
+{
+  border-radius: 1rem;
+  color: #FF6542;
+  width: 250px;
+  margin: auto;
+  margin-top: 30px;
+  border-color: #FF6542;
+}
 .price
 {
-  color: red;
+
 }

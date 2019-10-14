@@ -35,6 +35,12 @@ export class ProductsdataService {
       }
     ]
   }
+  getproductbyid(id)
+  {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({ Authorization : 'Basic ' + token});
+    return this.http.get<IProduct[]>("http://localhost:8888/api/items/"+id,{headers});
+  }
    getProductList()
    {
      const token = sessionStorage.getItem('token');

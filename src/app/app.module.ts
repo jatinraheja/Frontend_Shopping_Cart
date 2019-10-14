@@ -17,7 +17,8 @@ import {FormsModule} from "@angular/forms";
 import { LogoutComponent } from './logout/logout.component';
 import {AuthenticateService} from "./authenticate.service";
 import {AppService} from "./app.service";
-import { HComponent } from './h/h.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+
 // import {AuthGuardService} from "./auth-guard.service";
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HComponent } from './h/h.component';
     LoginComponent,
     SignupComponent,
     LogoutComponent,
-    HComponent
+    OrderHistoryComponent,
+
   ],
   imports: [
     BrowserModule,

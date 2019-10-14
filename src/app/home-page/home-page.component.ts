@@ -63,6 +63,7 @@ export class HomePageComponent implements OnInit {
     this.cartservice.addItemtoCart(id).subscribe(data=>
     {
       this.addeditem=data;
+      this.router.navigate(['/usercart']);
     });
 
   }
