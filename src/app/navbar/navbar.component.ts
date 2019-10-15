@@ -24,5 +24,9 @@ gotocart()
 {
   this.route.navigate(['/cart']);
 }
+gotoprofile()
+{
+  this.route.navigate(['/myprofile']);
+}
 
 }

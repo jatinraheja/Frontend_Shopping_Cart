@@ -61,20 +61,10 @@ export class UserCartComponent implements OnInit {
     // }
 
   ngOnInit() {
-    this.cartservice.showcart().subscribe(data =>
-    {
-      this.data=data;
-      this.sum=0;
-
-      this.ct=0;
-      for(let val of this.data)
-      {
-          this.sum += val.items.price * val.quantity;
-          this.ct += 1;
-
-      }
+    this.cartservice.showcart().subscribe(data => {
+      this.data = data;
+      this.display();
     })
-
   }
   decrement(id,quantity)
   {
@@ -83,12 +73,12 @@ export class UserCartComponent implements OnInit {
       this.cartservice.decrement(id).subscribe(data => {
         this.cartservice.showcart().subscribe(data1 => {
           this.data = data1;
-          this.ngOnInit();
+         this.display();
 
         })
 
       });
-      this.ngOnInit();
+
 
     }
 
@@ -100,12 +90,13 @@ export class UserCartComponent implements OnInit {
       this.cartservice.showcart().subscribe(data1=>
       {
         this.data=data1;
+        this.display();
 
       })
 
 
     });
-    this.ngOnInit();
+
     //this.ngOnInit();
     // console.log(this.str);
   }
@@ -116,15 +107,29 @@ export class UserCartComponent implements OnInit {
       this.cartservice.showcart().subscribe(data1=>
       {
         this.data=data1;
-
+        this.display();
       })
     })
-    this.ngOnInit();
+
     // console.log(this.str);
   }
+  display()
+  {
+    this.sum=0;
+    this.ct=0;
+    for(let val of this.data)
+    {
+      this.sum += val.items.price * val.quantity;
+      this.ct += 1;
+
+    }
+
+  }
+
   navigate()
   {
     this.route.navigate(['/orderhistory']);
+   // location.reload();
   }
 
 }

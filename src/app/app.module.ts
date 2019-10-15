@@ -18,6 +18,8 @@ import { LogoutComponent } from './logout/logout.component';
 import {AuthenticateService} from "./authenticate.service";
 import {AppService} from "./app.service";
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import {UserService} from "./user.service";
 
 // import {AuthGuardService} from "./auth-guard.service";
 
@@ -33,6 +35,7 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
     SignupComponent,
     LogoutComponent,
     OrderHistoryComponent,
+    MyProfileComponent,
 
   ],
   imports: [
@@ -45,7 +48,8 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
   providers: [
     ProductsdataService,
     AuthenticateService,
-    AppService
+    AppService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

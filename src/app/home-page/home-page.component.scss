@@ -2,12 +2,21 @@
 .cardstyle
 {
   width: 18rem;
+  border: none;
 }
-.btn-warning
+.btncart
+{
+
+  color: #235789;
+  border-radius: 1rem;
+  border-color: #235789;
+}
+.btncart:hover
 {
   background-color: #235789;
   color: white;
 }
+
 .image
 {
   width: 250px;

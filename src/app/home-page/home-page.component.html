@@ -108,20 +108,20 @@
 
   <h3 class=" card-title  text-info">Price Filter</h3>
     <div>
-    <input type="checkbox" class="checkbox form-check-input ml-1" id="check1" name="option1" value="something" checked>
-    <span class="ml-4">below 499</span>
+    <input type="radio" class="checkbox form-check-input ml-1" id="check1" (click)="pricebetween(1,499)" name="option1" value="something" checked>
+    <span class="ml-4" >below 499</span>
     </div>
     <div>
-    <input type="checkbox" class="checkbox form-check-input ml-1" id="check2" name="option1" value="something" >
-    <span class="ml-4">500-999</span>
+    <input type="radio" class="checkbox form-check-input ml-1" id="check2" (click)="pricebetween(500,1999)" name="option1" value="something" >
+    <span class="ml-4">500-1999</span>
     </div>
     <div>
-    <input type="checkbox" class="checkbox form-check-input ml-1" id="check3" name="option1" value="something" >
-    <span class="ml-4">1000-1499</span>
+    <input type="radio" class="checkbox form-check-input ml-1" id="check3"(click)="pricebetween(2000,5000)" name="option1" value="something" >
+    <span class="ml-4">1999-5000</span>
     </div>
     <div>
-      <input type="checkbox" class="checkbox form-check-input ml-1" id="check4" name="option1" value="something" >
-      <span class="ml-4">1500-1999</span>
+      <input type="radio" class="checkbox form-check-input ml-1" id="check4" (click)="pricebetween(5000,50000)" name="option1" value="something" >
+      <span class="ml-4">Above 5000</span>
     </div>
   </div>
 
@@ -138,7 +138,7 @@
         <span class="price"><b>₹{{images.price}}</b></span>
 <!--        <span class="off">{{images.off}}</span>-->
 <!--       <div class=" btn-info mt-1 bttn col-10" (click)="productdetails(images.productid)">Product Details</div>-->
- <div class="btn btn-warning mt-2" (click)="addtocart(images.productid)">Add to cart</div>
+ <div class="btn btncart mt-2 w-50 ml-auto mr-auto" (click)="addtocart(images.productid)">Add to cart</div>
       </div>
     </div>
   </div>

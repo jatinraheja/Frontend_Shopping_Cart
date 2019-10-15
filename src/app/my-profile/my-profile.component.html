@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="card bg-light p-4 mx-4" style="width:25%;height:80%">
+    <img class="rounded circle text-center rounded-circle mx-auto" src="assets/image/myprofile1.png" style="height:120px;width:140px;background-color:lightgray">
+    <div class="text-center"><h4></h4></div>
+    <div class="text-center" style="color:gray"><p>Customer</p></div>
+    <div>Username:{{username}}</div>
+    <div>Password:{{password}}</div>
+    <div>Email:{{email}}</div>
+<!--    <div style="width:100%;height:50%">-->
+<!--      <div class="my-3"><p style="font-size:0.9rem"><i class='fas fa-map-marker-alt' style="margin-right:0.5rem"></i>Masjid Banda,Hyderabad<br><br><i class='fas fa-phone' style="margin-right:0.5rem"></i>9450788108<br><br><i class='far fa-envelope' style="margin-right:0.5rem"></i>vineet@beehyv.com<br><br>-->
+<!--        <i class='far fa-envelope' style="margin-right:0.5rem"></i><a href="#">http://home.iitk.ac.in/~vineetks</a><br><br>-->
+<!--        <i class="fas fa-language" aria-hidden="true" style="margin-right:0.5rem"></i>English</p></div>-->
+<!--    </div>-->
+
+  </div>
+  <div>
+    <h3 class="ml-5">Order History</h3>
+  <div class="card">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let i of orderdata">
+        <td>{{i.itemName}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.quantity}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
