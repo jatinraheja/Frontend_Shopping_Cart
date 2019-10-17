@@ -1,6 +1,9 @@
 export class postdata{
 email : string;
-password : string
+password : string;
+username : string
+contact : number;
+gender  : string
 }
 export interface respdata{
   id:number;

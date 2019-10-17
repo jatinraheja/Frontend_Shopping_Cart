@@ -1,0 +1,27 @@
+<div class="container">
+  <h3>Enter New Item Details</h3>
+  <form id="contact" class="mt-3" action="" method="post">
+    <fieldset>
+      <input placeholder="Item name" type="text" name="first" tabindex="1" required autofocus [(ngModel)]="itemname">
+    </fieldset>
+    <fieldset>
+      <input placeholder="Item Price" type="number" name="second" tabindex="2" [(ngModel)]="price" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Item details" type="text" name="third" tabindex="3" [(ngModel)]="details" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Item Image url" type="url" name="fourth" tabindex="4" [(ngModel)]="image" required>
+    </fieldset>
+  <fieldset>
+      <input placeholder="Enter Category" tabindex="5" name="fifth" [(ngModel)]="category" required>
+  </fieldset>
+    <fieldset>
+      <input placeholder="Enter SubCategory" tabindex="6" name="sixth" [(ngModel)]="subcategory" required>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" (click)="additem()" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+
+  </form>
+</div>

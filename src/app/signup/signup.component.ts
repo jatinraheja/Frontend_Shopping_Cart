@@ -33,6 +33,7 @@ export class SignupComponent implements OnInit {
     this.pdata=new postdata();
     this.pdata.email=this.email;
     this.pdata.password=this.password;
+    this.pdata.username=this.username;
     this.signupservice.adddata(this.pdata).subscribe((res :respdata)=>{
       this.rdata=res;
   });

@@ -20,6 +20,8 @@ import {AppService} from "./app.service";
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import {UserService} from "./user.service";
+import { AddItemComponent } from './add-item/add-item.component';
+import { EditprofileComponent } from './editprofile/editprofile.component';
 
 // import {AuthGuardService} from "./auth-guard.service";
 
@@ -36,6 +38,8 @@ import {UserService} from "./user.service";
     LogoutComponent,
     OrderHistoryComponent,
     MyProfileComponent,
+    AddItemComponent,
+    EditprofileComponent,
 
   ],
   imports: [

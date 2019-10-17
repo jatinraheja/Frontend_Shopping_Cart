@@ -28,5 +28,10 @@ gotoprofile()
 {
   this.route.navigate(['/myprofile']);
 }
+additem()
+{
+  this.route.navigate(['/additem']);
+}
 
 }
+
