@@ -7,7 +7,7 @@
       <a class=" nav-link ml-5 text-dark" (click)="gotohome()">
         <div class="d-flex menu">
           <div><img src="https://img.icons8.com/color/32/000000/home.png"></div>
-          <div><p class=" ml-1  "> Home </p></div>
+          <div><p class="ml-1 textsize"> Home </p></div>
         </div>
       </a>
     </li>
@@ -17,7 +17,7 @@
       <a class="nav-link ml-5 text-dark" (click)="getByCategory('Electronics')">
         <div class="d-flex" >
           <div><img src="https://img.icons8.com/color/32/000000/laptop--v2.png"></div>
-          <div><p class="ml-1 menu">Electronics</p></div>
+          <div><p class="ml-1 menu textsize">Electronics</p></div>
         </div>
       </a>
     </li>
@@ -26,7 +26,7 @@
       <a class="nav-link ml-5 text-dark">
         <div class="d-flex">
           <div> <img src="https://img.icons8.com/officel/32/000000/books.png"></div>
-          <div class="ml-1 menu" (click)="getByCategory('Books')">Books</div>
+          <div class="ml-1 menu textsize" (click)="getByCategory('Books')">Books</div>
         </div>
       </a>
     </li>
@@ -35,8 +35,8 @@
 
       <a class="nav-link ml-5 text-dark">
         <div class="d-flex">
-          <div><img src="https://img.icons8.com/color/32/000000/mens-shoe.png"></div>
-          <div class="ml-1 menu" (click)="getByCategory('Footwear')">Footwear</div>
+          <div><img src="https://img.icons8.com/color/48/000000/trainers.png"></div>
+          <div class="ml-1 menu textsize" (click)="getByCategory('Footwear')">Footwear</div>
         </div>
       </a>
 
@@ -123,8 +123,24 @@
       <input type="radio" class="checkbox form-check-input ml-1" id="check4" (click)="pricebetween(5000,50000)" name="option1" value="something" >
       <span class="ml-4">Above 5000</span>
     </div>
+    <h3 class=" card-title  text-info mt-3">Brand Filter</h3>
+    <div>
+      <input type="radio" class="checkbox form-check-input ml-1" (click)="getbybrand('Addidas')" name="option1" value="something">
+      <span class="ml-4" >Addidas</span>
+    </div>
+    <div>
+      <input type="radio" class="checkbox form-check-input ml-1" (click)="getbybrand('Nike')" name="option1" value="something" >
+      <span class="ml-4">Nike</span>
+    </div>
+    <div>
+      <input type="radio" class="checkbox form-check-input ml-1" (click)="getbybrand('boAt')" name="option1" value="something" >
+      <span class="ml-4">boAt</span>
+    </div>
+    <div>
+      <input type="radio" class="checkbox form-check-input ml-1"  (click)="getbybrand('LG')" name="option1" value="something" >
+      <span class="ml-4">LG</span>
+    </div>
   </div>
-
 </div>
 
   <div class="row ml-2">

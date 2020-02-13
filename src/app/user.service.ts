@@ -7,8 +7,20 @@ import {postdata} from "./Postdataobj";
   providedIn: 'root'
 })
 export class UserService {
+  httpoptions = {
+    headers : new HttpHeaders({
+      'Content-Type' : 'application/json'
+
+    })
+  };
 
   constructor(private http : HttpClient) { }
+  getalluser()
+  {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({ Authorization : 'Basic ' + token});
+    return this.http.get("http://localhost:8888/user/allusers",{headers});
+  }
   getuser()
   {
     const token = sessionStorage.getItem('token');
@@ -16,7 +28,7 @@ export class UserService {
     return this.http.get("http://localhost:8888/user/users",{headers});
 
   }
-  updateuser(id,pdata : postdata)
+  updateuser(id,pdata:postdata)
   {
     const token = sessionStorage.getItem('token');
     const headers = new HttpHeaders({ Authorization : 'Basic ' + token});

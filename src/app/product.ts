@@ -7,5 +7,6 @@ export interface  IProduct{
   category:string,
   subcategory:string,
   active:number,
-  itemDetails:string
+  itemDetails:string,
+  brand:string
 }

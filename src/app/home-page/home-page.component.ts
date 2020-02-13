@@ -79,5 +79,13 @@ export class HomePageComponent implements OnInit {
     this.image=data;
   })
 }
+getbybrand(brand)
+{
+  return this.productdata.getproductbybrand(brand).subscribe(data=> {
+
+    this.image = data;
+  })
+
+}
 }
 

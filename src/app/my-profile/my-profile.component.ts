@@ -45,4 +45,8 @@ userdata;
   {
     this.route.navigate(['/editprofile']);
   }
+  order()
+  {
+    this.route.navigate(['/orderhistory']);
+  }
 }

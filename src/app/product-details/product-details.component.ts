@@ -22,7 +22,7 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit() {
     // let prid = parseInt(this.route.snapshot.paramMap.get('id'));
-    // this.productid = prid;
+     // this.productid = prid;
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.productid = parseInt(params.get('id'));
       console.log(this.productid);

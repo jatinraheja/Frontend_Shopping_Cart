@@ -29,6 +29,7 @@ export class AddItemComponent implements OnInit {
     this.pdata.category=this.category;
     this.pdata.image=this.image;
     this.pdata.subcategory=this.subcategory;
+    this.pdata.details=this.details;
     this.itemdataService.additem(this.pdata).subscribe(data=>
     {
       this.rdata=data;

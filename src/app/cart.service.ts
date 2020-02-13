@@ -4,9 +4,10 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
-export class CartService {
+export class
+CartService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http :HttpClient) { }
   showcart()
   {
     const token = sessionStorage.getItem('token');

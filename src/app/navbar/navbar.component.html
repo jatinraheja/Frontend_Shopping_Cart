@@ -1,6 +1,6 @@
 <nav class="navbar navbar1 navbar-expand-sm">
 
-      <div class="navbar-brand text   shp" (click)="gotohome()">Shopping.in</div>
+      <div class="navbar-brand text   shp" (click)="gotohome()"><span class="display-4">Shopping.in </span> </div>
 
 <!--  <ul>-->
 <!--    <li> </li>-->
@@ -27,42 +27,42 @@
 <!--      </a>-->
 <!--    </li>-->
     <li class="nav-item text">
-      <a class="nav-link  ml-1" (click)="additem()">
-        <!--        <div class="d-flex">-->
-        <!--          <div class=""><img src="https://img.icons8.com/material/32/000000/shopping-cart&#45;&#45;v1.png"></div>-->
-        <div><a>Add Product</a></div>
-        <!--        </div>-->
+      <a class="nav-link ml-1 mr-0" (click)="additem()">
+                <div class="d-flex">
+                  <div class=""><img src="https://img.icons8.com/color/32/000000/add-database.png"></div>
+        <div class="pl-2 pr-2 textsize"><a>AddProduct</a></div>
+                </div>
       </a>
     </li>
     <li class="nav-item text">
-      <a class="nav-link  ml-1" (click)="gotoprofile()">
-<!--        <div class="d-flex">-->
-<!--          <div class=""><img src="https://img.icons8.com/material/32/000000/shopping-cart&#45;&#45;v1.png"></div>-->
-          <div class=""><a>Myprofile</a></div>
-<!--        </div>-->
+      <a class="nav-link  ml-1 " (click)="gotoprofile()">
+        <div class="d-flex">
+          <div class=""><img src="https://img.icons8.com/color/32/000000/gender-neutral-user.png"></div>
+          <div class="textsize"><a>Myprofile</a></div>
+        </div>
       </a>
     </li>
     <li class="nav-item text">
       <a class="nav-link  ml-1" (click)="gotocart()">
         <div class="d-flex">
-        <div class=""><img src="https://img.icons8.com/material/32/000000/shopping-cart--v1.png"></div>
-         <div class=""><a>Cart</a></div>
+        <div class=""><img src="https://img.icons8.com/color/32/000000/shopping-cart.png"></div>
+         <div class="textsize"><a>Cart</a></div>
         </div>
       </a>
     </li>
     <li class="nav-item text">
-      <a *ngIf="loginservice.isUserLoggedIn()" class="nav-link text " routerLink="/login" href="#">
+      <a *ngIf="loginservice.isUserLoggedIn()" class="nav-link text mr-1" routerLink="/login" href="#">
         <div class="d-flex">
           <div><img src="https://img.icons8.com/windows/32/000000/login-rounded-right.png"></div>
-          <div class=""><a class="">Login&Signup</a></div>
+          <div class="textsize"><a class="">Login&Signup</a></div>
         </div>
       </a>
     </li>
     <li>
-      <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link text" (click)="loginservice.logOut()" routerLink="/home" href="#">
+      <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link text mr-1" (click)="loginservice.logOut()" routerLink="/home" href="#">
         <div class="d-flex">
           <div><img src="https://img.icons8.com/windows/32/000000/login-rounded-right.png"></div>
-          <div class=""><a class="">Logout</a></div>
+          <div class="textsize"><a class="">Logout</a></div>
         </div>
       </a>
     </li>

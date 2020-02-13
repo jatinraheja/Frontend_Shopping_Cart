@@ -36,6 +36,7 @@ export class SignupComponent implements OnInit {
     this.pdata.username=this.username;
     this.signupservice.adddata(this.pdata).subscribe((res :respdata)=>{
       this.rdata=res;
+      alert("User registered successfully");
   });
     this.route.navigate(['login']);
   }

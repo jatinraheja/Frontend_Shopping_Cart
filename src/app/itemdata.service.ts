@@ -8,6 +8,7 @@ import {Itemdata} from "./Itemdata";
 export class ItemdataService {
 
   constructor(private http : HttpClient) { }
+
   additem(itemdata : Itemdata)
   {
     const token = sessionStorage.getItem('token');
