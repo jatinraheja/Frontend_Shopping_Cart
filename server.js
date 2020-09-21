@@ -6,4 +6,6 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname + 'dist/ecommercewebsite/index.html'));
 
 });
-app.listen(process.env.PORT || 8090);
+app.listen(process.env.PORT , () => {
+  console.log("server started")
+});
